@@ -42,7 +42,7 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <a
-            href="/cv.pdf"
+            href="/public/CV SERGIO MAMANI (1).pdf"
             className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
           >
             {t("hero.downloadCV")}
@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="rounded-2xl border border-emerald-200/60 bg-white p-2 shadow-inner dark:border-slate-700 dark:bg-slate-900">
               <div className="aspect-square overflow-hidden rounded-xl">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+                  src="/public/SergioPerfil.png"
                   alt="Foto de perfil"
                   className="h-full w-full object-cover"
                 />
@@ -80,7 +80,7 @@ export default function Hero() {
             <ul className="flex flex-col items-center gap-4 pr-1">
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/sergio-omar-mamani-23239337b/"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm ring-1 ring-black/5 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400/50 dark:bg-slate-800/80 dark:ring-white/10"
