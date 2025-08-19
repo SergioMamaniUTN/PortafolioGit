@@ -1,17 +1,20 @@
-// About.jsx
-// ===== Datos fuera del componente =====
+import { useLang } from "../lang/useLang";
+
 const frontend = [
   "HTML",
   "CSS",
   "JavaScript",
   "React",
+  "TypeScript",
   "Tailwind",
   "Bootstrap",
 ];
-const backend = ["En Proceso"];
-const tools = ["En proceso"];
 
 export default function About() {
+  const { t } = useLang();
+  const backend = [t("about.inProgress")];
+  const tools = [t("about.inProgress")];
+
   return (
     <section
       id="acerca"
@@ -19,15 +22,23 @@ export default function About() {
     >
       {/* ====== ENCABEZADO ====== */}
       <header className="text-center">
-        <p className="mx-auto inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-5 py-2 text-baaw font-semibold text-emerald-700 text-semibold">
-          Acerca de mí
+        <p
+          className="mx-auto inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-5 py-2 text-base font-semibold text-emerald-700
+                       dark:border-emerald-500/30 dark:bg-emerald-900/20 dark:text-emerald-300"
+        >
+          {t("about.badge")}
         </p>
-        <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-balance">
-          Quién soy y en qué me enfoco
+        <h2
+          className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-balance
+                       dark:text-slate-100"
+        >
+          {t("about.title")}
         </h2>
-        <p className="mx-auto mt-3 max-w-3xl text-slate-600 leading-relaxed">
-          Desarrollador Frontend con React, JavaScript, HTML y CSS. Manejo
-          Tailwind y Bootstrap. Estudiante de Ingeniería en Sistemas (UTN FRBA).
+        <p
+          className="mx-auto mt-3 max-w-3xl text-slate-600 leading-relaxed
+                      dark:text-slate-300"
+        >
+          {t("about.subtitle")}
         </p>
       </header>
 
@@ -35,14 +46,22 @@ export default function About() {
       <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {/* Proyectos personales */}
         <li>
-          <article className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg">
+          <article
+            className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm
+                              dark:border-slate-700 dark:bg-slate-800"
+          >
+            <div
+              className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg
+                            dark:bg-emerald-900/30 dark:text-emerald-300"
+            >
               📁
             </div>
             <div>
-              <p className="text-lg font-bold text-slate-900">En proceso</p>
-              <p className="text-sm font-medium text-slate-600">
-                Proyectos personales
+              <p className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {t("about.metricProjectsValue")}
+              </p>
+              <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                {t("about.metricProjectsLabel")}
               </p>
             </div>
           </article>
@@ -50,14 +69,22 @@ export default function About() {
 
         {/* Tecnologías */}
         <li>
-          <article className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg">
+          <article
+            className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm
+                              dark:border-slate-700 dark:bg-slate-800"
+          >
+            <div
+              className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg
+                            dark:bg-emerald-900/30 dark:text-emerald-300"
+            >
               🧠
             </div>
             <div>
-              <p className="text-lg font-bold text-slate-900">6</p>
-              <p className="text-sm font-medium text-slate-600">
-                Tecnologías que manejo
+              <p className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                7
+              </p>
+              <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                {t("about.metricTechsLabel")}
               </p>
             </div>
           </article>
@@ -65,14 +92,22 @@ export default function About() {
 
         {/* Cursos / Formación */}
         <li>
-          <article className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg">
+          <article
+            className="h-24 sm:h-28 flex items-center gap-4 rounded-3xl border border-emerald-100/60 bg-white p-4 shadow-sm
+                              dark:border-slate-700 dark:bg-slate-800"
+          >
+            <div
+              className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-lg
+                            dark:bg-emerald-900/30 dark:text-emerald-300"
+            >
               🎓
             </div>
             <div>
-              <p className="text-lg font-bold text-slate-900">2</p>
-              <p className="text-sm font-medium text-slate-600">
-                Cursos y formación
+              <p className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                2
+              </p>
+              <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                {t("about.metricCoursesLabel")}
               </p>
             </div>
           </article>
@@ -82,95 +117,118 @@ export default function About() {
       {/* ====== ESPECIALIZACIÓN + STACK ====== */}
       <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_1fr]">
         {/* Especialización */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-gradient-to-b from-emerald-50/60 to-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Especialización</h3>
-          <p className="mt-2 text-slate-700 leading-relaxed">
-            Frontend con React y JavaScript. Maquetado accesible y responsive
-            con HTML, CSS, Tailwind y Bootstrap. Estudiante de Ingeniería en
-            Sistemas (UTN FRBA).
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-gradient-to-b from-emerald-50/60 to-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:from-slate-800/60 dark:to-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.specializationTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 leading-relaxed dark:text-slate-300">
+            {t("about.specializationText")}
           </p>
 
           <div className="mt-5 space-y-4">
             {/* Item 1 */}
-            <article className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm">
+            <article
+              className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm
+                                dark:border-slate-700 dark:bg-slate-800"
+            >
               <header className="mb-1 flex items-center gap-2">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50">
+                <span
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50
+                                 dark:bg-emerald-900/30 dark:text-emerald-300"
+                >
                   🧩
                 </span>
-                <h4 className="text-base font-semibold text-slate-900">
-                  React &amp; Frontend
+                <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                  {t("about.card1Title")}
                 </h4>
               </header>
-              <p className="text-sm text-slate-700">
-                Interfaces modernas y componentes reutilizables con buenas
-                prácticas.
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                {t("about.card1Text")}
               </p>
             </article>
 
             {/* Item 2 */}
-            <article className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm">
+            <article
+              className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm
+                                dark:border-slate-700 dark:bg-slate-800"
+            >
               <header className="mb-1 flex items-center gap-2">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50">
+                <span
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50
+                                 dark:bg-emerald-900/30 dark:text-emerald-300"
+                >
                   🎨
                 </span>
-                <h4 className="text-base font-semibold text-slate-900">
-                  Maquetado &amp; UI
+                <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                  {t("about.card2Title")}
                 </h4>
               </header>
-              <p className="text-sm text-slate-700">
-                Diseño responsive y consistencia visual con Tailwind y
-                Bootstrap.
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                {t("about.card2Text")}
               </p>
             </article>
           </div>
         </section>
 
         {/* Stack técnico */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Stack técnico</h3>
-          <p className="mt-2 text-slate-700">Tecnologías que domino</p>
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:bg-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.stackTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 dark:text-slate-300">
+            {t("about.stackSubtitle")}
+          </p>
 
           {/* Frontend */}
-          <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-500">
-            Frontend
+          <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {t("about.frontendTitle")}
           </h4>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {frontend.map((t) => (
+            {frontend.map((tech) => (
               <li
-                key={t}
-                className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700"
+                key={tech}
+                className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700
+                           dark:border-emerald-500/30 dark:bg-emerald-900/20 dark:text-emerald-300"
               >
-                {t}
+                {tech}
               </li>
             ))}
           </ul>
 
           {/* Backend (en proceso) */}
-          <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500">
-            Backend
+          <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {t("about.backendTitle")}
           </h4>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {backend.map((t) => (
+            {backend.map((it) => (
               <li
-                key={t}
-                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600"
+                key={it}
+                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600
+                           dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300"
               >
-                {t}
+                {it}
               </li>
             ))}
           </ul>
 
           {/* Herramientas (en proceso) */}
-          <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500">
-            Herramientas
+          <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {t("about.toolsTitle")}
           </h4>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {tools.map((t) => (
+            {tools.map((it) => (
               <li
-                key={t}
-                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600"
+                key={it}
+                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600
+                           dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300"
               >
-                {t}
+                {it}
               </li>
             ))}
           </ul>
@@ -180,59 +238,78 @@ export default function About() {
       {/* ====== LOGROS + EXPLORANDO ====== */}
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Logros */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Logros</h3>
-          <p className="mt-2 text-slate-700">
-            Formación y proyectos personales
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:bg-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.achievementsTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 dark:text-slate-300">
+            {t("about.achievementsSubtitle")}
           </p>
 
           <ul className="mt-4 space-y-4">
             {/* UTN */}
             <li>
-              <article className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm">
+              <article
+                className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm
+                                  dark:border-slate-700 dark:bg-slate-800"
+              >
                 <header className="mb-1 flex items-center gap-2">
-                  <span>🎓</span>
-                  <h4 className="text-base font-semibold text-slate-900">
-                    Estudiante de Ingeniería en Sistemas (UTN FRBA)
+                  <span className="dark:text-emerald-300">🎓</span>
+                  <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                    {t("about.achUTNTitle")}
                   </h4>
                 </header>
-                <p className="text-sm text-slate-700">
-                  Bases sólidas de informática y programación.
+                <p className="text-sm text-slate-700 dark:text-slate-300">
+                  {t("about.achUTNText")}
                 </p>
               </article>
             </li>
 
             {/* Udemy */}
             <li>
-              <article className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm">
+              <article
+                className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm
+                                  dark:border-slate-700 dark:bg-slate-800"
+              >
                 <header className="mb-1 flex items-center gap-2">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50">
+                  <span
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50
+                                   dark:bg-emerald-900/30 dark:text-emerald-300"
+                  >
                     🧩
                   </span>
-                  <h4 className="text-base font-semibold text-slate-900">
-                    Curso Frontend en Udemy (2024)
+                  <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                    {t("about.achUdemyTitle")}
                   </h4>
                 </header>
-                <p className="text-sm text-slate-700">
-                  Fundamentos de desarrollo frontend y proyectos introductorios.
+                <p className="text-sm text-slate-700 dark:text-slate-300">
+                  {t("about.achUdemyText")}
                 </p>
               </article>
             </li>
 
             {/* Portafolio en construcción */}
             <li>
-              <article className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm">
+              <article
+                className="rounded-2xl border border-emerald-100/70 bg-white p-4 shadow-sm
+                                  dark:border-slate-700 dark:bg-slate-800"
+              >
                 <header className="mb-1 flex items-center gap-2">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50">
+                  <span
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50
+                                   dark:bg-emerald-900/30 dark:text-emerald-300"
+                  >
                     🚀
                   </span>
-                  <h4 className="text-base font-semibold text-slate-900">
-                    Portafolio en construcción
+                  <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                    {t("about.achPortfolioTitle")}
                   </h4>
                 </header>
-                <p className="text-sm text-slate-700">
-                  Portafolio profesional con React y Tailwind para mostrar
-                  futuros proyectos.
+                <p className="text-sm text-slate-700 dark:text-slate-300">
+                  {t("about.achPortfolioText")}
                 </p>
               </article>
             </li>
@@ -240,43 +317,60 @@ export default function About() {
         </section>
 
         {/* Explorando */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-gradient-to-b from-emerald-50/60 to-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Explorando</h3>
-          <p className="mt-2 text-slate-700">Crecimiento técnico continuo</p>
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-gradient-to-b from-emerald-50/60 to-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:from-slate-800/60 dark:to-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.exploringTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 dark:text-slate-300">
+            {t("about.exploringSubtitle")}
+          </p>
 
           <ul className="mt-6 space-y-5">
             {/* Item barra 1 */}
             <li>
               <div className="mb-2 flex items-center justify-between text-sm font-medium">
-                <span className="text-slate-700">Frotend (aprendiendo)</span>
-                <span className="text-emerald-700">10%</span>
+                <span className="text-slate-700 dark:text-slate-300">
+                  {t("about.exploringFrontend")}
+                </span>
+                <span className="text-emerald-700 dark:text-emerald-300">
+                  10%
+                </span>
               </div>
-              <div className="h-2 w-full rounded-full bg-emerald-100">
-                <div className="h-2 w-[10%] rounded-full bg-emerald-500" />
+              <div className="h-2 w-full rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                <div className="h-2 w-[10%] rounded-full bg-emerald-500 dark:bg-emerald-400" />
               </div>
             </li>
 
             {/* Item barra 2 */}
             <li>
               <div className="mb-2 flex items-center justify-between text-sm font-medium">
-                <span className="text-slate-700">Backend (aprendiendo)</span>
-                <span className="text-emerald-700">3%</span>
+                <span className="text-slate-700 dark:text-slate-300">
+                  {t("about.exploringBackend")}
+                </span>
+                <span className="text-emerald-700 dark:text-emerald-300">
+                  3%
+                </span>
               </div>
-              <div className="h-2 w-full rounded-full bg-emerald-100">
-                <div className="h-2 w-[3%] rounded-full bg-emerald-500" />
+              <div className="h-2 w-full rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                <div className="h-2 w-[3%] rounded-full bg-emerald-500 dark:bg-emerald-400" />
               </div>
             </li>
 
             {/* Item barra 3 */}
             <li>
               <div className="mb-2 flex items-center justify-between text-sm font-medium">
-                <span className="text-slate-700">
-                  Maquetado (Tailwind / Bootstrap)
+                <span className="text-slate-700 dark:text-slate-300">
+                  {t("about.exploringLayout")}
                 </span>
-                <span className="text-emerald-700">10%</span>
+                <span className="text-emerald-700 dark:text-emerald-300">
+                  10%
+                </span>
               </div>
-              <div className="h-2 w-full rounded-full bg-emerald-100">
-                <div className="h-2 w-[10%] rounded-full bg-emerald-500" />
+              <div className="h-2 w-full rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                <div className="h-2 w-[10%] rounded-full bg-emerald-500 dark:bg-emerald-400" />
               </div>
             </li>
           </ul>
@@ -286,30 +380,53 @@ export default function About() {
       {/* ====== FILOSOFÍA + COLABORACIÓN ====== */}
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Filosofía */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Filosofía</h3>
-          <p className="mt-2 text-slate-700">Principios que guían mi código</p>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:bg-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.philosophyTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 dark:text-slate-300">
+            {t("about.philosophySubtitle")}
+          </p>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700 dark:text-slate-300">
             <li>
-              <strong>Código limpio</strong> — legible y mantenible.
+              <strong className="text-slate-900 dark:text-slate-100">
+                {t("about.cleanCode")}
+              </strong>{" "}
+              — {t("about.cleanCodeDesc")}
             </li>
             <li>
-              <strong>Performance</strong> — optimización desde el diseño.
+              <strong className="text-slate-900 dark:text-slate-100">
+                {t("about.performance")}
+              </strong>{" "}
+              — {t("about.performanceDesc")}
             </li>
             <li>
-              <strong>Enfoque en el usuario</strong> — UX clara y accesible.
+              <strong className="text-slate-900 dark:text-slate-100">
+                {t("about.userFocus")}
+              </strong>{" "}
+              — {t("about.userFocusDesc")}
             </li>
           </ul>
         </section>
 
         {/* Colaboración */}
-        <section className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900">Colaboración</h3>
-          <p className="mt-2 text-slate-700">Metodologías y soft skills</p>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Trabajo en equipo</li>
-            <li>Comunicación clara</li>
-            <li>Adaptabilidad &amp; perseverancia</li>
+        <section
+          className="rounded-3xl border border-emerald-200/60 bg-white p-6 sm:p-8 shadow-sm
+                            dark:border-slate-700 dark:bg-slate-800"
+        >
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            {t("about.collabTitle")}
+          </h3>
+          <p className="mt-2 text-slate-700 dark:text-slate-300">
+            {t("about.collabSubtitle")}
+          </p>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700 dark:text-slate-300">
+            <li>{t("about.teamwork")}</li>
+            <li>{t("about.clearComm")}</li>
+            <li>{t("about.adaptability")}</li>
           </ul>
         </section>
       </div>
