@@ -42,7 +42,7 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <a
-            href="/public/CV SERGIO MAMANI (1).pdf"
+            href="/CV SERGIO MAMANI.pdf"
             className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
           >
             {t("hero.downloadCV")}
