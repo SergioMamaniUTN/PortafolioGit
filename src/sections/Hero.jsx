@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="rounded-2xl border border-emerald-200/60 bg-white p-2 shadow-inner dark:border-slate-700 dark:bg-slate-900">
               <div className="aspect-square overflow-hidden rounded-xl">
                 <img
-                  src="/public/SergioPerfil.png"
+                  src="/SergioPerfil.png"
                   alt="Foto de perfil"
                   className="h-full w-full object-cover"
                 />
