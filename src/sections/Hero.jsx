@@ -1,10 +1,4 @@
-import {
-  LuLinkedin,
-  LuGithub,
-  LuInstagram,
-  LuCalendar,
-  LuMail,
-} from "react-icons/lu";
+import { LuLinkedin, LuGithub, LuInstagram, LuMail } from "react-icons/lu";
 import { useLang } from "../lang/useLang";
 
 export default function Hero() {
@@ -91,7 +85,7 @@ export default function Hero() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/SergioMamaniUTN"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm ring-1 ring-black/5 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400/50 dark:bg-slate-800/80 dark:ring-white/10"
@@ -102,7 +96,7 @@ export default function Hero() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/ser_gi919?igsh=MWhxbzhiYTNyMm5lcA=="
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm ring-1 ring-black/5 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400/50 dark:bg-slate-800/80 dark:ring-white/10"
@@ -111,20 +105,10 @@ export default function Hero() {
                   <LuInstagram className="h-5 w-5" />
                 </a>
               </li>
+
               <li>
                 <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm ring-1 ring-black/5 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400/50   dark:bg-slate-800/80 dark:ring-white/10"
-                  aria-label="Calendario"
-                >
-                  <LuCalendar className="h-5 w-5" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mamanisergioomar@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm ring-1 ring-black/5 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400/50 dark:bg-slate-800/80 dark:ring-white/10"
