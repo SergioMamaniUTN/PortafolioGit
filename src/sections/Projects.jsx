@@ -27,26 +27,25 @@ export default function Projects() {
         >
           {/* Etiqueta “Vista Previa” */}
           <span
-            className="pointer-events-none absolute left-3 top-3 z-10 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700
-                           dark:border-emerald-500/30 dark:bg-emerald-900/20 dark:text-emerald-300"
+            className=" absolute left-3 top-3 z-10 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700
+                           dark:border-emerald-500/30 dark:bg-emerald-900/90 dark:text-emerald-300"
           >
             &lt;/&gt; {t("projects.preview")}
           </span>
 
           {/* Imagen / Placeholder */}
           <figure className="relative">
-            {/* 👉 cuando tengas la imagen, ponela en /public/projects/proyecto-1.jpg y descomentá la etiqueta <img> */}
-            {/* <img
-              src="/projects/proyecto-1.jpg"
+            <img
+              src="/public/portadaleova.png"
               alt="Proyecto personal — vista previa"
               className="h-56 w-full object-cover"
-            /> */}
-            <div
+            />
+            {/*<div
               className="flex h-56 w-full items-center justify-center bg-emerald-50 text-sm font-medium text-emerald-700
                             dark:bg-emerald-900/20 dark:text-emerald-300"
             >
               {t("projects.inProgress")}
-            </div>
+            </div>*/}
           </figure>
 
           {/* Contenido */}
@@ -65,36 +64,34 @@ export default function Projects() {
                   {t("projects.techsLabel")}
                 </p>
                 <ul className="mt-2 flex flex-wrap gap-2">
-                  {[
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
-                    "React",
-                    "Tailwind",
-                    "Bootstrap",
-                  ].map((tech) => (
-                    <li
-                      key={tech}
-                      className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700
+                  {["HTML", "CSS", "JavaScript", "React", "Tailwind"].map(
+                    (tech) => (
+                      <li
+                        key={tech}
+                        className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700
                                  dark:border-emerald-500/30 dark:bg-emerald-900/20 dark:text-emerald-300"
-                    >
-                      {tech}
-                    </li>
-                  ))}
+                      >
+                        {tech}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
 
             {/* Acciones (deshabilitadas por ahora) */}
             <footer className="mt-5 flex gap-3">
-              <span
-                className="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-400
-                               dark:border-slate-600 dark:bg-slate-800 dark:text-slate-500"
+              <a
+                href="https://proyectoleovaxtrem.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex  items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-400
+                               dark:border-slate-900 dark:bg-slate-300 dark:text-slate-900"
               >
                 {t("projects.demoSoon")}
-              </span>
+              </a>
               <span
-                className="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-400
+                className="cursor-not-allowed  inline-flex  items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-400
                                dark:border-slate-600 dark:bg-slate-800 dark:text-slate-500"
               >
                 {t("projects.codeSoon")}

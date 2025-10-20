@@ -89,11 +89,11 @@ export default {
     preview: "Preview",
     inProgress: "In progress",
     project1Alt: "Personal project — preview",
-    project1Title: "Personal project (in progress)",
+    project1Title: "Leova Xtrem — Frontend Development",
     project1Desc:
-      "Building a replica of a website to practice layout, components and best practices.",
+      "I designed and developed the entire interface for Leova Xtrem, an online store specializing in workwear. I implemented responsive layout using React and Tailwind CSS, incorporating animations and a smooth navigation experience.",
     techsLabel: "Technologies:",
-    demoSoon: "Demo — Coming soon",
+    demoSoon: "View page",
     codeSoon: "Code — Coming soon",
   },
 

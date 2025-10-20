@@ -1,5 +1,4 @@
 export default {
-  // ...
   navbar: {
     home: "Inicio",
     about: "Acerca de mí",
@@ -90,12 +89,12 @@ export default {
     preview: "Vista Previa",
     inProgress: "En progreso",
     project1Alt: "Proyecto personal — vista previa",
-    project1Title: "Proyecto personal (en progreso)",
+    project1Title: "Leova Xtrem — Desarrollo Frontend",
     project1Desc:
-      "Construyendo una réplica de una página web para practicar maquetado, componentes y buenas prácticas.",
+      "Diseñé y desarrollé la interfaz completa de Leova Xtrem, una tienda online de indumentaria laboral. Implementé la maquetación responsive con React y Tailwind CSS, incorporando animaciones y una experiencia fluida de navegación.",
     techsLabel: "Tecnologías:",
-    demoSoon: "Demo — Próximamente",
-    codeSoon: "Código — Próximamente",
+    demoSoon: "Ver",
+    codeSoon: "Ver código",
   },
 
   experience: {

@@ -1,4 +1,3 @@
-// src/lang/LangProvider.jsx
 import React, { createContext, useEffect, useMemo, useState } from "react";
 import es from "./es.js";
 import en from "./en.js";
@@ -75,5 +74,4 @@ export function LangProvider({ children }) {
   return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
-// opcional: export default por si en algún lado importás por default
 export default LangProvider;

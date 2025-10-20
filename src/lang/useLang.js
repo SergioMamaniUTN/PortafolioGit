@@ -1,6 +1,5 @@
-// src/lang/useLang.js
 import { useContext } from "react";
-import { LangContext } from "./LangProvider.jsx"; // 👈 importante la extensión .jsx
+import { LangContext } from "./LangProvider.jsx";
 
 export function useLang() {
   const ctx = useContext(LangContext);
