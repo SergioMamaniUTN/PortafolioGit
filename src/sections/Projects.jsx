@@ -36,7 +36,7 @@ export default function Projects() {
           {/* Imagen / Placeholder */}
           <figure className="relative">
             <img
-              src="/public/portadaleova.png"
+              src="/portadaleova.png"
               alt="Proyecto personal — vista previa"
               className="h-56 w-full object-cover"
             />
