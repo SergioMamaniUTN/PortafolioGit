@@ -90,12 +90,12 @@ export default function Projects() {
               >
                 {t("projects.demoSoon")}
               </a>
-              <span
+              {/*<span
                 className="cursor-not-allowed  inline-flex  items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-400
                                dark:border-slate-600 dark:bg-slate-800 dark:text-slate-500"
               >
                 {t("projects.codeSoon")}
-              </span>
+              </span> */}
             </footer>
           </div>
         </article>
